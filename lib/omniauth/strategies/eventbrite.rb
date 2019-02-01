@@ -16,6 +16,7 @@ module OmniAuth
       option :client_options, site: 'https://www.eventbrite.com',
                               authorize_url: '/oauth/authorize',
                               token_url: '/oauth/token'
+      option :provider_ignores_state, true
 
       uid { raw_info['id'].to_s }
 
